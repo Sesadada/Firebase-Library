@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>The Akward Library</h1>
+        <div id="items" class="container">
+
+        </div>
+        <form id="myForm">
+            <input id="title" name="title" class="box" type="text" placeholder="Title">
+            <input id="author" name="author" class="box" type="text" placeholder="Author">
+            <input id="pages" name="pages" class="box" type="text" placeholder="Pages">
+            Read:<input id="check" name="read" class="box" type="checkbox">
+            <button class="sub">Add Book</button>
+        </form>
+        <input id="search" name="search" class="sub" type="text" placeholder="Search..">
+
+
+    </div>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyB9NtRbKZhxNAfPzQCjMnkDIhl7UGW4dmU",
+            authDomain: "akward-library.firebaseapp.com",
+            databaseURL: "https://akward-library.firebaseio.com",
+            projectId: "akward-library",
+            storageBucket: "akward-library.appspot.com",
+            messagingSenderId: "57169338133",
+            appId: "1:57169338133:web:8b6a95131e0f31ee47931c",
+            measurementId: "G-N20Y6MN4QS"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore()
+        firebase.analytics();
+    </script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
