@@ -16,10 +16,12 @@ h1 {
   color: gray;
   font-weight: lighter;
   font-style: italic;
+  padding: 10px;
 }
 
 .box {
   margin: 0.2vw;
+  margin-left: 10px;
   border: 1px gray;
   border-radius: 5px;
   font-weight: lighter;
@@ -44,22 +46,22 @@ input[type="radio"] {
 }
 .delete {
   margin-left: 8px;
-  color: rgb(170, 129, 136);
-  border: 1px solid rgb(202, 200, 200);
+  color: rgb(43, 42, 42);
+  border: 1px solid rgb(202, 202, 200);
   border-radius: 4px;
+  background-color: rgb(245, 216, 120);
 }
 
 .sub {
-  color: rgb(170, 129, 136);
+  color: rgb(95, 93, 92);
   border: 1px solid rgb(202, 200, 200);
   border-radius: 4px;
-  background-color: rgb(245, 240, 166);
+  background-color: rgb(248, 163, 177);
   padding: 1vh;
 }
 
 span {
-  margin-right: 5px;
-  padding: 1vh;
+  padding: 0.3vh;
 }
 
 #search {
@@ -67,5 +69,5 @@ span {
   padding: 1vh;
   margin-top: 3vh;
   border-radius: 6px;
-  background-color: rgb(245, 240, 166);
+  background-color: rgb(211, 232, 240);
 }
