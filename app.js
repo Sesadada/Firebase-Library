@@ -57,7 +57,7 @@ const renderBook = (doc) => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (form.title.value == "" && form.author.value == "") {
-    alert("You need to write the title or the author at leaste, you lazy");
+    alert("You need to write the title or the author at least, you lazy");
   } else {
     db.collection("books").add({
       title: form.title.value,
