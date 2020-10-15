@@ -58,16 +58,20 @@ const renderBook = (doc) => {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  db.collection("books").add({
-    title: form.title.value,
-    author: form.author.value,
-    pages: form.pages.value,
-    read: form.read.checked,
-  });
-  form.title.value = "";
-  form.author.value = "";
-  form.pages.value = "";
-  form.read.value = "";
+  if (form.title.value == "" && form.author.value == "") {
+    alert("You need to write the title or the author at leaste, you lazy");
+  } else {
+    db.collection("books").add({
+      title: form.title.value,
+      author: form.author.value,
+      pages: form.pages.value,
+      read: form.read.checked,
+    });
+    form.title.value = "";
+    form.author.value = "";
+    form.pages.value = "";
+    form.read.value = "";
+  }
 });
 
 db.collection("books")
