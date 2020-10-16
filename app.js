@@ -58,6 +58,9 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (form.title.value == "" && form.author.value == "") {
     alert("You need to write the title or the author at least, you lazy");
+  }
+  if (typeof parseInt(form.pages.value) != "number") {
+    alert("You need to introduce a number of pages");
   } else {
     db.collection("books").add({
       title: form.title.value,
