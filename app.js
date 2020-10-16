@@ -56,16 +56,19 @@ const renderBook = (doc) => {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  if (form.title.value == "" && form.author.value == "") {
+  if (
+    form.title.value == "" ||
+    form.author.value == "" ||
+    form.pages.value == ""
+  ) {
     alert("You need to write the title or the author at least, you lazy");
-  }
-  if (typeof parseInt(form.pages.value) != "number") {
+  } else if (typeof parseInt(form.pages.value) != "number") {
     alert("You need to introduce a number of pages");
   } else {
     db.collection("books").add({
       title: form.title.value,
       author: form.author.value,
-      pages: form.pages.value,
+      pages: parseInt(form.pages.value),
       read: form.read.checked,
     });
     form.title.value = "";
