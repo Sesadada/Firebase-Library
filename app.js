@@ -56,8 +56,12 @@ const renderBook = (doc) => {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  if (form.title.value == "" || form.author.value == "") {
-    alert("You cannot add an empty book, you lazy");
+  if (
+    form.title.value == "" ||
+    form.author.value == "" ||
+    form.pages.value == ""
+  ) {
+    alert("Complete the information, you lazy");
   } else if (
     typeof parseInt(form.pages.value) != "number" ||
     isNaN(form.pages.value)
